@@ -12,10 +12,11 @@
 
 class Camera {
 public:
-    Camera() {
-        lower_left_corner = vec3(-2.0, -1.0, -1.0);
-        horizontal = vec3(4.0, 0.0, 0.0);
-        vertical = vec3(0.0, 2.0, 0.0);
+    Camera(int& x, int& y) {
+        
+        lower_left_corner = vec3(-x / 100.0, -y / 100.0, -1.0);
+        horizontal = vec3(x / 50.0, 0.0, 0.0);
+        vertical = vec3(0.0, y / 50.0, 0.0);
         origin = vec3(0.0, 0.0, 0.0);
     }
     

@@ -10,10 +10,15 @@
 
 #include "ray.h"
 
+// friend class
+// Material has access to hitable members
+class Material;
+
 struct hit_record {
     float t;
     vec3 p;
     vec3 normal;
+    Material *mat_ptr;
 };
 
 class hitable {
